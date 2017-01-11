@@ -231,6 +231,7 @@ public class LoginActivity extends AppCompatActivity {
                     .getDefaultSharedPreferences(getApplicationContext());
             SharedPreferences.Editor editor = settings.edit();
             editor.putString("auth_token", tokenResponse.getAccess_token());
+            editor.putString("refresh_token", tokenResponse.getRefresh_token());
             editor.commit();
             return true;
         }
